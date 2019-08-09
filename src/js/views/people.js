@@ -1,7 +1,7 @@
 import React from "react";
 import { Context } from "../store/appContext";
 
-export class Planets extends React.Component {
+export class People extends React.Component {
 	render() {
 		return (
 			<div className="container">
@@ -10,13 +10,13 @@ export class Planets extends React.Component {
 						return (
 							<table className="table">
 								<tr>
-									<th>Planets Name </th>
+									<th>Character:</th>
 								</tr>
 
-								{!!store.planets.results &&
-									store.planets.results.map((planet, i) => (
+								{!!store.people.results &&
+									store.people.results.map((people, i) => (
 										<tr key={i}>
-											<td>{planet.name}</td>
+											<td>{people.name}</td>
 										</tr>
 									))}
 							</table>

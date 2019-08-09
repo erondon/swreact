@@ -14,7 +14,10 @@ const getState = ({ getStore, setStore }) => {
 				}
 			],
 
-			planets: {}
+			planets: {},
+			people: {},
+			vehicles: {},
+			starships: {}
 		},
 		actions: {
 			changeColor: (index, color) => {
@@ -35,6 +38,23 @@ const getState = ({ getStore, setStore }) => {
 				fetch(url)
 					.then(resp => resp.json())
 					.then(data => setStore({ planets: data }));
+			},
+
+			getPeople: url => {
+				fetch(url)
+					.then(resp => resp.json())
+					.then(data => setStore({ people: data }));
+			},
+
+			getVehicles: url => {
+				fetch(url)
+					.then(resp => resp.json())
+					.then(data => setStore({ vehicles: data }));
+			},
+			getStarships: url => {
+				fetch(url)
+					.then(resp => resp.json())
+					.then(data => setStore({ starships: data }));
 			}
 		}
 	};

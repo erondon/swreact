@@ -9,6 +9,9 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { People } from "./views/people";
+import { Vehicles } from "./views/vehicles";
+import { Starships } from "./views/starships";
 
 //create your first component
 export class Layout extends React.Component {
@@ -24,7 +27,10 @@ export class Layout extends React.Component {
 						<Navbar />
 						<Switch>
 							<Route exact path="/" component={Planets} />
-							<Route path="/demo" component={Demo} />
+							<Route path="/people" component={People} />
+							<Route path="/vehicles" component={Vehicles} />
+							<Route path="/starships" component={Starships} />
+
 							<Route path="/single/:theid" component={Single} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>

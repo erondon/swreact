@@ -28,6 +28,9 @@ const injectContext = PassedComponent => {
 			 * you should do your ajax requests or fetch api requests here
 			 **/
 			this.state.actions.getPlanets("https://swapi.co/api/planets");
+			this.state.actions.getPeople("https://swapi.co/api/people");
+			this.state.actions.getVehicles("https://swapi.co/api/vehicles");
+			this.state.actions.getStarships("https://swapi.co/api/starships");
 		}
 
 		render() {
