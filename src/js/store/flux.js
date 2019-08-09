@@ -12,7 +12,9 @@ const getState = ({ getStore, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			],
+
+			planets: {}
 		},
 		actions: {
 			changeColor: (index, color) => {
@@ -28,6 +30,11 @@ const getState = ({ getStore, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			getPlanets: url => {
+				fetch(url)
+					.then(resp => resp.json())
+					.then(data => setStore({ planets: data }));
 			}
 		}
 	};
