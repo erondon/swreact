@@ -3,7 +3,7 @@
   <div className="card-body">
     {!!store.people.results && store.people.results.map((people, i)=>(
 
-    <h5 className="card-title">{people.name}</h5>
+    <h5 className="card-title" key={i}>{people.name}</h5>
 
     ))}
 
