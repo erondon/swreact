@@ -48,9 +48,6 @@ export class People extends React.Component {
 														</div>
 													</div>
 												</div>
-												<div className='row'>
-													<div className='col-md-12'></div>
-													<button className="btn btn-primary">Next</button>
 											</div>
 										);
 									})}
