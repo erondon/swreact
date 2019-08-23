@@ -1,21 +1,41 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 
 export class Navbar extends React.Component {
 	render() {
 		return (
-			<nav className="navbar navbar-light bg-light mb-3">
-				<Link to="/">
-					<span className="navbar-brand mb-0 h1">Star Wars</span>
-				</Link>
-				<div className="ml-auto">
-					<Link to="/people">People</Link>
+			<Fragment>
+				<nav className="navbar navbar-expand-lg navbar-light bg-light">
+					<a className="navbar-brand" href="#">
+						Star Wars API
+					</a>
+					<button
+						className="navbar-toggler"
+						type="button"
+						data-toggle="collapse"
+						data-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span className="navbar-toggler-icon" />
+					</button>
 
-					<Link to="/">
-						<h3>Planets</h3>
-					</Link>
-				</div>
-			</nav>
+					<div className="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul className="navbar-nav mr-auto">
+							<Link className="nav-link" to="/">
+								Planets
+							</Link>
+
+							<Link className="nav-link" to="/people">
+								People
+							</Link>
+							<Link className="nav-link" to="/vehicles">
+								Vehicles{" "}
+							</Link>
+						</ul>
+					</div>
+				</nav>
+			</Fragment>
 		);
 	}
 }
